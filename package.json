@@ -1,0 +1,36 @@
+{
+  "name": "news-explorer-api",
+  "version": "1.0.0",
+  "description": "API сервиса NewsExplorer.",
+  "main": "app.js",
+  "scripts": {
+    "start": "cross-env PORT=3000 node app.js",
+    "dev": "cross-env PORT=3000 nodemon app.js"
+  },
+  "author": "Artem Medvedev",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "celebrate": "^11.0.1",
+    "cookie-parser": "^1.4.4",
+    "cross-env": "^6.0.3",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-rate-limit": "^5.0.0",
+    "express-winston": "^4.0.2",
+    "helmet": "^3.21.2",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.8.9",
+    "validator": "^12.2.0",
+    "winston": "^3.2.1"
+  },
+  "devDependencies": {
+    "crypto": "^1.0.1",
+    "editorconfig": "^0.15.3",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.20.0",
+    "nodemon": "^1.19.4"
+  }
+}
