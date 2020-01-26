@@ -1,2 +1,4 @@
-# news-explorer-api
-API сервиса NewsExplorer.
+# NewsExplorer API
+## API сервиса NewsExplorer.
+### Доступ к API:
+* `https://api.news.neomedved.site`
