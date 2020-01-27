@@ -35,7 +35,7 @@ module.exports.deleteArticleById = (req, res, next) => {
       } else if (String(article.owner._id) !== userId) {
         throw new CustomError(403, messages.articleCantBeDeleted);
       } else {
-        Article.findByIdAndDelete(articleId)
+        return Article.findByIdAndDelete(articleId)
           .select('-owner')
           .then((articleStillExists) => {
             if (articleStillExists) {
@@ -43,8 +43,7 @@ module.exports.deleteArticleById = (req, res, next) => {
             } else {
               throw new CustomError(404, messages.articleNotFound);
             }
-          })
-          .catch(next);
+          });
       }
     })
     .catch(next);
