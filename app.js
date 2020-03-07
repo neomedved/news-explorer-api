@@ -6,6 +6,7 @@ const cookieParser = require('cookie-parser');
 const mongoose = require('mongoose');
 const { errors } = require('celebrate');
 const helmet = require('helmet');
+const cors = require('cors');
 
 const customErrors = require('./middlwares/custom-errors');
 const { requestLogger, errorLogger } = require('./middlwares/logger');
@@ -25,6 +26,7 @@ mongoose.connect(require('./config/mongo-url'), {
 });
 
 app.use(helmet());
+app.use(cors());
 app.use(limiter);
 
 app.use(bodyParser.json());
