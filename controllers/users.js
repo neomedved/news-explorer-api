@@ -46,7 +46,7 @@ module.exports.login = (req, res, next) => {
         httpOnly: true,
         sameSite: true,
       })
-        .json({ jwt });
+        .json({ jwt: token });
     })
     .catch(next);
 };
