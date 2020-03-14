@@ -19,7 +19,7 @@ module.exports.createArticle = (req, res, next) => {
   Article.create({
     keyword, title, text, date, source, link, image, owner: userId,
   })
-    .then(() => res.status(201).send(messages.articleCreated))
+    .then((article) => res.status(201).json({ articleId: article._id }))
     .catch(next);
 };
 
