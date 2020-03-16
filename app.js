@@ -26,7 +26,10 @@ mongoose.connect(require('./config/mongo-url'), {
 });
 
 app.use(helmet());
-app.use(cors());
+app.use(cors({
+  origin: '*',
+  credentials: true,
+}));
 app.use(limiter);
 
 app.use(bodyParser.json());
