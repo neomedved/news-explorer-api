@@ -1,4 +1,5 @@
 const router = require('express').Router();
+const proxy = require('express-http-proxy');
 
 const users = require('./users');
 const articles = require('./articles');
@@ -13,6 +14,8 @@ const messages = require('../variables/messages');
 router.post('/signin', userCredentialsValidator, login);
 
 router.post('/signup', userValidator, createUser);
+
+router.use('/newsapi', proxy('newsapi.org'));
 
 router.use(auth);
 
