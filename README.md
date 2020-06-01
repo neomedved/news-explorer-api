@@ -1,7 +1,7 @@
 # NewsExplorer API
 *v1.1.0*
 ## О проекте:
-API проекта NewsExplorer, сервиса, в котором можно найти новости по запросу и сохранить в личном кабинете.\
+API проекта [NewsExplorer](https://github.com/neomedved/news-explorer-frontend), сервиса, в котором можно найти новости по запросу и сохранить в личном кабинете.\
 Стек: *Node.js, Express, Webpack, MongoDB*.\
 **[URL](https://api.news.neomedved.site)**
 ### Развёртывание проекта:
